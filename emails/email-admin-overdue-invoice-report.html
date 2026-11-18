@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<title>Overdue Invoices Report – {{AS_OF_DATE}}</title>
+<style>@media only screen and (max-width:620px){.bx-wrap{width:100%!important;max-width:100%!important}.bx-pad{padding-left:20px!important;padding-right:20px!important}.bx-h1{font-size:24px!important}}</style>
+</head>
+<body style="margin:0;padding:0;background:#eceaf4;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#eceaf4;font-size:1px;line-height:1px;">{{INVOICE_COUNT}} overdue invoices as of {{AS_OF_DATE}}.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eceaf4"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" class="bx-wrap" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:600px;max-width:600px;background:#ffffff;border-radius:6px;">
+<tr><td align="center" style="padding:24px 40px;background:#ffffff;border-top:8px solid #664aae;border-bottom:3px solid #13a2db;border-radius:6px 6px 0 0;">
+<img src="{{LOGO_URL}}" width="240" alt="{{COMPANY_NAME}}" style="display:block;border:0;width:240px;max-width:100%;height:auto;margin:0 auto;"></td></tr>
+<tr><td class="bx-pad" style="padding:32px 40px 8px 40px;">
+<h1 class="bx-h1" style="margin:0 0 12px 0;font:bold 28px/1.25 Georgia,'Times New Roman',serif;color:#141d38;">Overdue Invoices Report</h1>
+<p style="margin:0;font:15px/1.6 Arial,Helvetica,sans-serif;color:#5d6480;">Hello {{ADMIN_NAME}}, the attached report contains <b>{{INVOICE_COUNT}}</b> invoice(s) that are overdue as of {{AS_OF_DATE}}. Draft and cancelled invoices are excluded. The single PDF attachment includes the invoice number, customer contact information, and payment status.</p></td></tr>
+<tr><td class="bx-pad" style="padding:24px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:14px 16px;background:#e3f4fb;border-top:2px solid #664aae;font:bold 16px Arial,Helvetica,sans-serif;color:#141d38;">Overdue invoices as of {{AS_OF_DATE}}</td><td align="right" style="padding:14px 16px;background:#e3f4fb;border-top:2px solid #664aae;font:bold 18px Arial,Helvetica,sans-serif;color:#141d38;">{{INVOICE_COUNT}}</td></tr></table></td></tr>
+<tr><td class="bx-pad" style="padding:16px 40px 32px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:12px 16px;background:#f7f5fc;border:1px solid #ddd9ec;border-left:4px solid #13a2db;border-radius:4px;font:13px/1.5 Arial,Helvetica,sans-serif;color:#5d6480;">
+<b style="color:#141d38;">Attached:</b> {{ATTACHMENT_NAME}} (PDF)</td></tr></table>
+<p style="margin:16px 0 0;font:14px/1.6 Arial,Helvetica,sans-serif;color:#5d6480;">Kind regards,<br><b>{{COMPANY_NAME}}</b></p></td></tr>
+<tr><td align="center" bgcolor="#141d38" style="padding:18px 40px;background:#141d38;border-radius:0 0 6px 6px;font:12px/1.6 Arial,Helvetica,sans-serif;color:#ffffff;">
+{{COMPANY_NAME}} | {{SENDER_ADDRESS}}<br><span style="color:#b9bdd4;">You are receiving this report because you opted in to internal administrator alerts.</span></td></tr>
+</table></td></tr></table>
+</body>
+</html>

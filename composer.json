@@ -1,0 +1,13 @@
+{
+    "name": "breax/invoicing-system",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "phpmailer/phpmailer": "^7.1",
+        "php": ">=8.2",
+        "ext-mbstring": "*",
+        "ext-pdo_mysql": "*",
+        "ext-openssl": "*",
+        "ext-fileinfo": "*"
+    }
+}

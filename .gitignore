@@ -1,0 +1,7 @@
+.env
+/vendor/
+/node_modules/
+/logs/*.log
+/.idea/
+/assets/uploads/*
+!/assets/uploads/.htaccess

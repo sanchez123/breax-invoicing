@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<title>Invoice {{INVOICE_NUMBER}} paid in full</title>
+<style>@media only screen and (max-width:620px){.bx-wrap{width:100%!important;max-width:100%!important}.bx-pad{padding-left:20px!important;padding-right:20px!important}.bx-h1{font-size:24px!important}}</style>
+</head>
+<body style="margin:0;padding:0;background:#eceaf4;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#eceaf4;font-size:1px;line-height:1px;">Thank you. Invoice {{INVOICE_NUMBER}} has been paid in full.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eceaf4"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" class="bx-wrap" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:600px;max-width:600px;background:#ffffff;border-radius:6px;">
+<tr><td align="center" style="padding:24px 40px;background:#ffffff;border-top:8px solid #664aae;border-bottom:3px solid #13a2db;border-radius:6px 6px 0 0;">
+<img src="{{LOGO_URL}}" width="240" alt="{{COMPANY_NAME}}" style="display:block;border:0;width:240px;max-width:100%;height:auto;margin:0 auto;"></td></tr>
+<tr><td class="bx-pad" style="padding:32px 40px 8px 40px;">
+<span style="display:inline-block;background:#1f9d62;color:#ffffff;font:bold 13px Arial,Helvetica,sans-serif;padding:6px 14px;border-radius:999px;">Paid in full</span>
+<h1 class="bx-h1" style="margin:16px 0 12px 0;font:bold 28px/1.25 Georgia,'Times New Roman',serif;color:#141d38;">Thank you — your invoice is paid</h1>
+<p style="margin:0;font:15px/1.6 Arial,Helvetica,sans-serif;color:#5d6480;">Hello {{CLIENT_NAME}}, we received your final payment on <b>{{LAST_PAYMENT_DATE}}</b>. Invoice <b>{{INVOICE_NUMBER}}</b> has been paid in full. Thank you for your business. A copy of the paid invoice is attached.</p></td></tr>
+<tr><td class="bx-pad" style="padding:24px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr><td style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Invoice number</td><td align="right" style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#141d38;">{{INVOICE_NUMBER}}</td></tr><tr><td style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Due date</td><td align="right" style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#141d38;">{{DUE_DATE}}</td></tr><tr><td style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Invoice total</td><td align="right" style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#141d38;">{{TOTAL}}</td></tr><tr><td style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Balance due</td><td align="right" style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#1f9d62;">{{BALANCE}}</td></tr><tr><td style="padding:14px 16px;background:#e5f5ec;border-top:2px solid #1f9d62;font:bold 16px Arial,Helvetica,sans-serif;color:#141d38;">Amount paid</td><td align="right" style="padding:14px 16px;background:#e5f5ec;border-top:2px solid #1f9d62;font:bold 18px Arial,Helvetica,sans-serif;color:#1f9d62;">{{AMOUNT_PAID}}</td></tr></table></td></tr>
+<tr><td class="bx-pad" style="padding:8px 40px 8px 40px;"><h2 style="margin:0 0 10px 0;font:bold 16px Arial,Helvetica,sans-serif;color:#141d38;">Transactions</h2>{{TRANSACTIONS_HTML}}</td></tr>
+{{EXCHANGE_RATE_BLOCK}}
+<tr><td class="bx-pad" align="center" style="padding:24px 40px 8px 40px;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#664aae" style="background:#664aae;border-radius:6px;">
+<a href="{{PUBLIC_INVOICE_URL}}" style="display:inline-block;padding:14px 36px;font:bold 15px Arial,Helvetica,sans-serif;color:#ffffff;text-decoration:none;">View paid invoice online</a></td></tr></table></td></tr>
+<tr><td class="bx-pad" style="padding:20px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:12px 16px;background:#f7f5fc;border:1px solid #ddd9ec;border-left:4px solid #1f9d62;border-radius:4px;font:13px/1.5 Arial,Helvetica,sans-serif;color:#5d6480;">
+<b style="color:#141d38;">Attached:</b> {{ATTACHMENT_NAME}} (PDF)</td></tr></table></td></tr>
+<tr><td class="bx-pad" style="padding:24px 40px 32px 40px;">
+<p style="margin:0;font:14px/1.6 Arial,Helvetica,sans-serif;color:#5d6480;">Questions about this invoice? Reply to this email or contact us at <a href="mailto:{{SUPPORT_EMAIL}}" style="color:#664aae;">{{SUPPORT_EMAIL}}</a>.</p>
+<p style="margin:16px 0 0 0;font:14px/1.6 Arial,Helvetica,sans-serif;color:#141d38;">Kind regards,<br><b>{{COMPANY_NAME}}</b></p></td></tr>
+<tr><td align="center" bgcolor="#141d38" style="padding:18px 40px;background:#141d38;border-radius:0 0 6px 6px;font:12px/1.6 Arial,Helvetica,sans-serif;color:#ffffff;">
+{{COMPANY_NAME}} | {{SENDER_ADDRESS}}<br><span style="color:#d1e2ff;">You are receiving this email as confirmation of payment for invoice {{INVOICE_NUMBER}} issued to {{CLIENT_EMAIL}}.</span></td></tr>
+</table></td></tr></table>
+</body>
+</html>

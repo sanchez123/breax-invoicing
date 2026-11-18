@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<title>Overdue invoice: {{INVOICE_NUMBER}} ({{CLIENT_COMPANY}}), {{BALANCE}} unpaid</title>
+<style>@media only screen and (max-width:620px){.bx-wrap{width:100%!important;max-width:100%!important}.bx-pad{padding-left:20px!important;padding-right:20px!important}.bx-h1{font-size:24px!important}}</style>
+</head>
+<body style="margin:0;padding:0;background:#eceaf4;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#eceaf4;font-size:1px;line-height:1px;">Invoice {{INVOICE_NUMBER}} for {{CLIENT_COMPANY}} is {{DAYS_OVERDUE}} days overdue.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eceaf4"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" class="bx-wrap" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:600px;max-width:600px;background:#ffffff;border-radius:6px;">
+<tr><td align="center" style="padding:24px 40px;background:#ffffff;border-top:8px solid #664aae;border-bottom:3px solid #13a2db;border-radius:6px 6px 0 0;">
+<img src="{{LOGO_URL}}" width="240" alt="{{COMPANY_NAME}}" style="display:block;border:0;width:240px;max-width:100%;height:auto;margin:0 auto;"></td></tr>
+<tr><td class="bx-pad" style="padding:32px 40px 8px 40px;">
+<span style="display:inline-block;background:#d6404e;color:#ffffff;font:bold 13px Arial,Helvetica,sans-serif;padding:6px 14px;border-radius:999px;">Overdue</span>
+<h1 class="bx-h1" style="margin:16px 0 12px 0;font:bold 28px/1.25 Georgia,'Times New Roman',serif;color:#141d38;">Invoice {{INVOICE_NUMBER}} is now overdue</h1>
+<p style="margin:0;font:15px/1.6 Arial,Helvetica,sans-serif;color:#5d6480;">Hello {{ADMIN_NAME}}, invoice <b>{{INVOICE_NUMBER}}</b> for <b>{{CLIENT_COMPANY}}</b> was due on {{DUE_DATE}} and is now overdue. <b>{{BALANCE}}</b> is still unpaid. Open the invoice to review it, and send the client an overdue reminder if you want to.</p></td></tr>
+<tr><td class="bx-pad" style="padding:24px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr><td style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Client</td><td align="right" style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#141d38;">{{CLIENT_COMPANY}}</td></tr><tr><td style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Invoice number</td><td align="right" style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#141d38;">{{INVOICE_NUMBER}}</td></tr><tr><td style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Due date</td><td align="right" style="padding:12px 16px;background:#ece8f7;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#141d38;">{{DUE_DATE}}</td></tr><tr><td style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;color:#5d6480;">Days overdue</td><td align="right" style="padding:12px 16px;background:#f7f5fc;font:14px Arial,Helvetica,sans-serif;font-weight:bold;color:#d6404e;">{{DAYS_OVERDUE}}</td></tr><tr><td style="padding:14px 16px;background:#e3f4fb;border-top:2px solid #664aae;font:bold 16px Arial,Helvetica,sans-serif;color:#141d38;">Amount due</td><td align="right" style="padding:14px 16px;background:#e3f4fb;border-top:2px solid #664aae;font:bold 18px Arial,Helvetica,sans-serif;color:#141d38;">{{BALANCE}}</td></tr></table></td></tr>
+{{EXCHANGE_RATE_BLOCK}}
+<tr><td class="bx-pad" align="center" style="padding:24px 40px 8px 40px;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#664aae" style="background:#664aae;border-radius:6px;">
+<a href="{{ADMIN_INVOICE_URL}}" style="display:inline-block;padding:14px 36px;font:bold 15px Arial,Helvetica,sans-serif;color:#ffffff;text-decoration:none;">Open invoice</a></td></tr></table></td></tr>
+<tr><td class="bx-pad" style="padding:24px 40px 32px 40px;">
+<p style="margin:0;font:14px/1.6 Arial,Helvetica,sans-serif;color:#5d6480;">This is an automatic alert for staff. <b>No message has been sent to the client.</b> To remind them, open the invoice and use the "Send overdue reminder" button.</p></td></tr>
+<tr><td align="center" bgcolor="#141d38" style="padding:18px 40px;background:#141d38;border-radius:0 0 6px 6px;font:12px/1.6 Arial,Helvetica,sans-serif;color:#ffffff;">
+{{COMPANY_NAME}} | {{SENDER_ADDRESS}}<br><span style="color:#b9bdd4;">You are receiving this alert because you are an admin of the invoicing system.</span></td></tr>
+</table></td></tr></table>
+</body>
+</html>
